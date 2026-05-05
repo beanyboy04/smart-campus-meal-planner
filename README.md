@@ -1,56 +1,108 @@
-The GSU Meal Planner is a full-stack web application designed to help students efficiently plan their weekly meals based on available dining options. The platform allows users to browse meals, organize them into a weekly schedule, and manage their selections in an intuitive, drag-and-drop interface.
+# Smart Campus Meal Planner
 
-This project was developed as part of a college coursework assignment to demonstrate practical application of web development concepts including frontend design, backend APIs, and database integration.
+A full-stack web application designed to help college students plan meals using dining hall menus. The system allows users to browse available meals, select options based on preferences, and create personalized meal plans.
 
+---
 
+## 🚀 Features
 
-The main goals of this project are:
+* View daily and weekly dining hall menus
+* Create and save personalized meal plans
+* Filter meals based on preferences
+* User-friendly dashboard for managing plans
 
-Provide students with an easy way to plan meals for the week
-Allow users to track calorie intake
-Demonstrate CRUD operations (Create, Read, Update, Delete)
-Implement drag-and-drop functionality for better user experience
-Showcase full-stack development skills (HTML, CSS, JavaScript, Node.js, MySQL)
+---
 
+## 🛠️ Tech Stack
 
-Key Features
-   User Features
-    Browse available meals
-    Search and filter meals by category
-    Add meals to a weekly planner
-    Drag and drop meals between days
-    Delete meals from planner
-    Automatically calculate daily calorie totals
-    Save and reset weekly plans
-    Login/logout functionality
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Node.js
+* **Database:** MySQL
 
-Staff Features
-    Separate staff login
-    Add new meals to the database
-    Delete meals from the system
-    Manage available dining options
+---
 
+## 🏗️ Architecture
 
+This project follows a layered architecture:
 
+* **UI Layer:** Handles user interaction and interface
+* **Application Layer:** Manages logic such as filtering and meal plan creation
+* **Database Layer:** Stores users, meals, and meal plans
 
-Technologies Used
-Frontend
-HTML5
-CSS3
-JavaScript (Vanilla JS)
-Backend
-Node.js
-Express.js
-Database
-MySQL
+---
 
-System Architecture
-Frontend communicates with backend via REST API
-Backend (Express) handles routing and database queries
-MySQL database stores:
-Users
-Meals
-Weekly plans
+## 📸 Screenshots
 
+*(Add your screenshots in the `/screenshots` folder and update file names below)*
 
+![Dashboard](screenshots/dashboard.png)
+![Meal Planner](screenshots/planner.png)
 
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/beanyboy04/smart-campus-meal-planner.git
+```
+
+### 2. Set up the database
+
+* Open MySQL Workbench
+* Run the SQL file located in `/database/schema.sql`
+
+### 3. Run the project
+
+* Open the project folder in VS Code
+* Launch the frontend using Live Server
+* (If backend is used) run:
+
+```bash
+node server.js
+```
+
+---
+
+## 🧪 Testing
+
+* Manual testing with iterative validation
+* Includes unit, integration, and system testing
+* Core features tested and functioning as expected
+
+---
+
+## ⚠️ Known Limitations
+
+* Prototype-level application (not production deployed)
+* Limited nutrition tracking features
+* No real-time dining hall API integration
+
+---
+
+## 🔮 Future Improvements
+
+* Real-time dining hall API integration
+* Enhanced nutrition and allergen tracking
+* Favorites and recommendation system
+* Improved UI and user experience
+
+---
+
+## 👥 Team & Credits
+
+Developed as part of a team project at Georgia Southern University.
+
+**Team Members:**
+
+* Ben Durham
+* Cameron Askins
+* Coury Ellison
+* Tyler Menzies
+
+---
+
+## 📌 Notes
+
+This project was created for educational purposes and demonstrates full-stack development, database design, and collaborative software engineering practices.
