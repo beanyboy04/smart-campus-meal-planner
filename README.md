@@ -51,7 +51,7 @@ git clone https://github.com/beanyboy04/smart-campus-meal-planner.git
 * (If backend is used) run:
 
 ```bash
-node server.js
+node api.js
 ```
 
 ---
