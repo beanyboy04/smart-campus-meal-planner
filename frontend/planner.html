@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planner</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2 class="logo">Weekly Planner</h2>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="planner.html" class="active">Planner</a>
+    <a href="meals.html">Meals</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="top-bar">
+    <button onclick="goToDashboard()" class="back-btn">← Back</button>
+    <button onclick="savePlan()" class="save-btn">Save Plan</button>
+  </div>
+  <div class="planner-grid">
+
+    
+
+    <!-- DAYS -->
+    <div class="day-column" data-day="Mon"><h4>Mon</h4></div>
+    <div class="day-column" data-day="Tue"><h4>Tue</h4></div>
+    <div class="day-column" data-day="Wed"><h4>Wed</h4></div>
+    <div class="day-column" data-day="Thu"><h4>Thu</h4></div>
+    <div class="day-column" data-day="Fri"><h4>Fri</h4></div>
+
+  </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/planner.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
