@@ -31,15 +31,6 @@ This project follows a layered architecture:
 
 ---
 
-## 📸 Screenshots
-
-*(Add your screenshots in the `/screenshots` folder and update file names below)*
-
-![Dashboard](screenshots/dashboard.png)
-![Meal Planner](screenshots/planner.png)
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
