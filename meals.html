@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meals</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>GSU Meal Planner</h2>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="planner.html">Planner</a>
+    <a href="meals.html" class="active">Meals</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <h2>Browse Meals</h2>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+
+    <input 
+  id="search" 
+  placeholder="Search meals..."
+>
+
+
+
+    <select id="sort">
+  <option value="">Sort</option>
+  <option value="low">Calories Low → High</option>
+  <option value="high">Calories High → Low</option>
+</select>
+
+  </div>
+
+  <!-- CATEGORY BUTTONS -->
+  <div class="categories">
+    <button onclick="setCategory('')">All</button>
+    <button onclick="setCategory('Main')">Main</button>
+    <button onclick="setCategory('Breakfast')">Breakfast</button>
+    <button onclick="setCategory('Salad')">Salad</button>
+    <button onclick="setCategory('Side')">Side</button>
+    <button onclick="setCategory('Soup')">Soup</button>
+  </div>
+
+  <!-- MEALS GRID -->
+  <div id="meals-grid" class="meals-grid"></div>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/api.js"></script>
+<script src="js/meals.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
