@@ -1,1 +1,514 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+}
 
+/* ===== COLORS (GSU THEME) ===== */
+:root {
+  --gsu-blue: #002855;
+  --gsu-dark: #001f44;
+  --gsu-gold: #C69214;
+  --light-bg: #f4f6f9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: var(--gsu-blue);
+  color: white;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--gsu-gold);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background:
+    linear-gradient(rgba(0,40,85,0.85), rgba(0,31,68,0.85)),
+    url('https://upload.wikimedia.org/wikipedia/commons/5/59/Georgia_Southern_University.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero button {
+  background: var(--gsu-gold);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.back-btn {
+  background: var(--gsu-blue);
+  color: white;
+}
+
+.back-btn:hover {
+  background: var(--gsu-dark);
+}
+
+.save-btn {
+  background: var(--gsu-gold);
+  color: white;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-page {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,40,85,0.85), rgba(0,31,68,0.85)),
+    url('https://upload.wikimedia.org/wikipedia/commons/5/59/Georgia_Southern_University.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
+
+.login-card {
+  position: relative;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.login-card h2 {
+  color: var(--gsu-blue);
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--gsu-blue);
+  color: white;
+}
+
+.login-card button.secondary {
+  background: var(--gsu-gold);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  padding: 30px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===== CATEGORIES ===== */
+.categories {
+  margin-bottom: 20px;
+}
+
+.categories button {
+  margin-right: 10px;
+  background: var(--gsu-blue);
+  color: white;
+}
+
+.categories button:hover {
+  background: var(--gsu-dark);
+}
+
+/* ===== MEALS GRID ===== */
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.meal-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.meal-card:hover {
+  transform: scale(1.05);
+}
+
+.meal-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ===== PLANNER ===== */
+.planner-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: 250px repeat(5, 1fr);
+  gap: 15px;
+}
+
+.meal-list {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.day-column {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 300px;
+  transition: 0.2s;
+}
+
+.day-column:hover {
+  background: #eef3ff;
+}
+
+.day-column.drag-over {
+  background: #dbe7ff;
+  border: 2px dashed var(--gsu-blue);
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--gsu-blue);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== LOGO ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-container h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gsu-gold);
+  text-shadow: 0 0 8px rgba(198,146,20,0.8);
+}
+button:hover {
+  box-shadow: 0 0 12px rgba(198,146,20,0.7);
+  transform: translateY(-2px);
+}
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px rgba(198,146,20,0.4);
+}
+.meal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(198,146,20,0.4);
+}
+.meal-card img {
+  height: 180px;
+  object-fit: cover;
+}
+.meal-card img {
+  height: 180px;
+  object-fit: cover;
+}
+.meal-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+}
+
+/* header */
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.meal-icon {
+  font-size: 22px;
+}
+
+/* category tags */
+.meal-category {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* colors per category */
+.meal-category.main { background: #ffe5e5; color: #d11a2a; }
+.meal-category.breakfast { background: #fff4cc; color: #b8860b; }
+.meal-category.salad { background: #e6f7e6; color: #2e8b57; }
+.meal-category.side { background: #e6ecff; color: #3b5bdb; }
+.meal-category.soup { background: #f3e6ff; color: #7b2cbf; }
+
+/* calories */
+.meal-info {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* button */
+.meal-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2e8b57;
+  color: white;
+  cursor: pointer;
+}
+
+.meal-card button:hover {
+  background: #256f46;
+}
+.planned-meal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.plan-content p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.plan-content small {
+  color: #666;
+}
+
+.delete-btn {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.planned-meal {
+  background: #f4f4f4;
+  padding: 8px;
+  margin: 6px;
+  border-radius: 8px;
+}
+.delete-btn {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.planner-grid {
+  gap: 16px;
+}
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.day-column {
+  background: #f4f5f7;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 220px;
+  max-width: 220px;
+  flex-shrink: 0;
+}
+
+.day-column h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.planned-meal {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: grab;
+  transition: transform 0.15s ease;
+  position: relative;
+}
+
+.planned-meal:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+.delete-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.planned-meal:hover .delete-btn {
+  opacity: 1;
+}
+.day-column.drag-over {
+  background: #dfe6f1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  width: 100%;
+  background: #0b3d6b; /* or your color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
